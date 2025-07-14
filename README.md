@@ -30,7 +30,7 @@ desktop and mobile apps, and Next.js for web services.
 Ensure the following tools are installed:
 
 - **Node.js** (v22+)
-- **pnpm** (v8+)
+- **Yarn** (v4+) - This project now uses Yarn instead of pnpm
 - **Rust** ([Install Rust](https://www.rust-lang.org/tools/install))
 - **Xcode** (for iOS development) _(Optional)_
 - **Android Studio** (for Android development) _(Optional)_
@@ -47,7 +47,7 @@ Ensure the following tools are installed:
 2. Install dependencies:
 
    ```bash
-   pnpm install
+   yarn install
    ```
 
 ### Running the Apps
@@ -55,13 +55,13 @@ Ensure the following tools are installed:
 #### Web (Next.js):
 
 ```bash
-pnpm --filter web dev
+yarn workspace web dev
 ```
 
 #### Desktop (Tauri):
 
 ```bash
-pnpm --filter native dev
+yarn workspace native dev
 ```
 
 #### Mobile (iOS/Android via Tauri):
@@ -87,7 +87,6 @@ The backend API for text analysis is powered by Next.js API routes. The main
 endpoint is:
 
 - `POST /api/text-analysis`
-
   - Request body: `{ "text": "Your text here" }`
   - Response:
 
@@ -123,16 +122,16 @@ endpoint is:
 
 ## Commands
 
-- **`pnpm dev`**: Start the development server for all apps.
-- **`pnpm tauri`**: Exposes the Tauri CLI for running the desktop or mobile app.
-- **`pnpm tauri dev`**: Start the Tauri desktop app in development mode.
-- **`pnpm tauri android dev`**: Start the Tauri android app in development mode.
-- **`pnpm tauri ios dev`**: Start the Tauri iOS app in development mode.
-- **`pnpm lint`**: Lint the codebase using ESLint.
-- **`pnpm format`**: Format the codebase using Prettier.
-- **`pnpm clean`**: Remove all build artifacts.
-- **`pnpm check-types`**: Check TypeScript types.
-- **`pnpm shadcn`**: Exposes the Shadcn CLI for generating components.
+- **`yarn dev`**: Start the development server for all apps.
+- **`yarn tauri`**: Exposes the Tauri CLI for running the desktop or mobile app.
+- **`yarn tauri dev`**: Start the Tauri desktop app in development mode.
+- **`yarn tauri android dev`**: Start the Tauri android app in development mode.
+- **`yarn tauri ios dev`**: Start the Tauri iOS app in development mode.
+- **`yarn lint`**: Lint the codebase using ESLint.
+- **`yarn format`**: Format the codebase using Prettier.
+- **`yarn clean`**: Remove all build artifacts.
+- **`yarn check-types`**: Check TypeScript types.
+- **`yarn shadcn`**: Exposes the Shadcn CLI for generating components.
 
 ## Contributing
 

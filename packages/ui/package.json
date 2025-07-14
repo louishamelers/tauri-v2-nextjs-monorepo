@@ -17,7 +17,7 @@
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
-    "shadcn": "pnpm dlx shadcn@latest"
+    "shadcn": "yarn dlx shadcn@latest"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -26,6 +26,7 @@
     "@types/node": "^20.11.24",
     "@types/react": "18.3.0",
     "@types/react-dom": "18.3.1",
+    "eslint": "^9.15.0",
     "typescript": "5.5.4"
   },
   "dependencies": {

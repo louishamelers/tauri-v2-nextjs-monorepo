@@ -1,6 +1,10 @@
 {
   "name": "tauri-v2-nextjs-monorepo",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
@@ -8,15 +12,15 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "turbo clean",
     "check-types": "turbo check-types",
-    "shadcn": "pnpm --filter @repo/ui shadcn",
-    "tauri": "pnpm --filter native tauri"
+    "shadcn": "yarn workspace @repo/ui shadcn",
+    "tauri": "yarn workspace native tauri"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
     "turbo": "^2.3.3",
     "typescript": "5.5.4"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "yarn@4.0.0",
   "engines": {
     "node": ">=18"
   }
